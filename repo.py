@@ -15,43 +15,45 @@ bloco_H = ['Fulminante', 'Maluca Pirada', 'Fala', 'Não quero despedida', 'Eston
 
 # Criando a lista, capturando a entrada
 print('Tyler, the pl4yl1st creat0r')
-size = int(input('Gerar uma lista de quantas músicas?\n'))
-new_list = []
-while len(new_list) != size:
-    new_list = list(set(new_list)) # Verificando e Removendo 'repetições'
-    x = random.randint(1, 8)
-    if x == 1:
-        new_list.append(random.choice(bloco_A))
-    elif x == 2:    
-        new_list.append(random.choice(bloco_B))
-    elif x == 3:
-        new_list.append(random.choice(bloco_C))
-    elif x == 4:
-        new_list.append(random.choice(bloco_D))
-    elif x == 5:
-        new_list.append(random.choice(bloco_E))
-    elif x == 6:
-        new_list.append(random.choice(bloco_F))
-    elif x == 7:
-        new_list.append(random.choice(bloco_G))
-    elif x == 8:
-        new_list.append(random.choice(bloco_H))
+lists = int(input('Deseja criar quantas listas de músicas?\n'))
+size = int(input(f'As {lists} lista são de quantas músicas?\n'))
+for _ in range(lists):
+    new_list = []
+    while len(new_list) != size:
+        new_list = list(set(new_list)) # Verificando e Removendo 'repetições'
+        x = random.randint(1, 8)
+        if x == 1:
+            new_list.append(random.choice(bloco_A))
+        elif x == 2:    
+            new_list.append(random.choice(bloco_B))
+        elif x == 3:
+            new_list.append(random.choice(bloco_C))
+        elif x == 4:
+            new_list.append(random.choice(bloco_D))
+        elif x == 5:
+            new_list.append(random.choice(bloco_E))
+        elif x == 6:
+            new_list.append(random.choice(bloco_F))
+        elif x == 7:
+            new_list.append(random.choice(bloco_G))
+        elif x == 8:
+            new_list.append(random.choice(bloco_H))
 
 
-print()
-# Contador de tempo
-print('Carregando', end='')
-for c in range(13):
-    print('.', end='')
-    time.sleep(0.08)
-# os.system('cls||clear')  # Limpa tela
-print()
-print()
+    print()
+    # Contador de tempo
+    print('Carregando', end='')
+    for c in range(13):
+        print('.', end='')
+        time.sleep(0.08)
+    # os.system('cls||clear')  # Limpa tela
+    print()
+    print()
 
 
-# Mostrando a lista pronta
-print('*** Lista de Músicas ***')
-f = 1
-for music in new_list:
-    print(f'{f}. ' + music)
-    f += 1
+    # Mostrando a lista pronta
+    print('*** Lista de Músicas ***')
+    f = 1
+    for music in new_list:
+        print(f'{f}. ' + music)
+        f += 1
