@@ -11,14 +11,14 @@ bloco_H = ['Fulminante', 'Maluca Pirada', 'Fala', 'Não quero despedida', 'Eston
 
 size = int(input())
 new_list = []
-for i in range(size):
+for _ in range(size):
     new_list.append(random.choice(bloco_A))
-    #new_list.append(random.choice(bloco_B))
-    #new_list.append(random.choice(bloco_C))
-    #new_list.append(random.choice(bloco_D))
-    #new_list.append(random.choice(bloco_E))
-    #new_list.append(random.choice(bloco_F))
-    #new_list.append(random.choice(bloco_G))
-    #new_list.append(random.choice(bloco_H))
+    new_list.append(random.choice(bloco_B))
+    new_list.append(random.choice(bloco_C))
+    new_list.append(random.choice(bloco_D))
+    new_list.append(random.choice(bloco_E))
+    new_list.append(random.choice(bloco_F))
+    new_list.append(random.choice(bloco_G))
+    new_list.append(random.choice(bloco_H))
 new_list = list(set(new_list))
 print(new_list)
